@@ -1,4 +1,5 @@
-export default [
+/* eslint-disable import/no-anonymous-default-export */
+git export default [
     { value: 'human', label: 'Humain' },
     { value: 'elf', label: 'Elfe' },
     { value: 'dwarf', label: 'Nain' },

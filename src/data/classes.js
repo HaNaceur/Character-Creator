@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default [
     { value: 'wizard', label: 'Magicien' },
     { value: 'fighter', label: 'Guerrier' },

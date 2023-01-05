@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default [
     { value: 'cat', label: 'Cat' },
     { value: 'dog', label: 'Dog' },
