@@ -5,7 +5,6 @@ import 'rpgui/rpgui.min.css';
 
 import App from './components/App/App';
 import { CharacterContextProvider } from './contexts/CharactersContext';
-import { PetContextProvider } from './contexts/PetsContext';
 import reportWebVitals from './reportWebVitals';
 import './styles/index.scss';
 
