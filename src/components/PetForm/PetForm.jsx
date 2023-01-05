@@ -1,14 +1,8 @@
 import React, { useReducer } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-
 import DropdownRpg from '../DropdownRpg/DropdownRpg';
-import RadiosButtonsRpg from '../RadiosButtonsRpg/RadiosButtonsRpg';
-import usePetReducer, {
-    actionReset, actionSetField, actionRandom, actionRedo, actionUndo, actionResetHistory,
-  } from '../../hooks/usePetReducer';
 
 import pets from '../../data/pets';
-import PetContext from '../../contexts/CharactersContext';
 
 import './styles.scss';
 
@@ -18,7 +12,7 @@ const initialState = {
 };
 
 const SET_FIELD = 'SET_FIELD';
- actionSetField();
+const actionSetField = (name, value) => ({ type: SET_FIELD, payload: { name, value } });
 
 function reducer(state, action) {
   switch (action.type) {
@@ -43,7 +37,7 @@ function PetForm() {
           <Row>
             <Col xs={12} md={6}>
               <label>
-                Name:
+                Prénom:
                 <input
                   placeholder="Hedwige..."
                   type="text"
@@ -66,7 +60,6 @@ function PetForm() {
     </div>
   );
 }
-
 PetForm.propTypes = {};
 
 PetForm.defaultProps = {};
