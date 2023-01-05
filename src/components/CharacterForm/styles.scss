@@ -1,0 +1,48 @@
+@use "/src/styles/vars";
+@use "/src/styles/mixins";
+
+.character-form {
+    @include mixins.form-container;
+
+    .row {
+        padding-top: vars.$gutter;
+    }
+
+    .header {
+        position: relative;
+        padding: 0 2rem;
+        .undo-redo-container {
+            button {
+                position: absolute;
+                top: 0;
+                width: 2em;
+                height: 2em;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                margin: 0;
+
+                &.btn-undo {
+                    left: 0;
+                }
+
+                &.btn-redo {
+                    right: 0;
+                }
+            }
+        }
+        .title {
+            font-size: 2em;
+        }
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .submit-button-container {
+        padding: 0 vars.$gutter;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
